@@ -17,6 +17,8 @@ if [ -z "$player" ]; then
 fi
 
 while true; do
+    # Remove blank lines from the playlist
+    sed -i '/^[[:space:]]*$/d' "$playlist"
     # If there are music to play, play the first one.
     # Else wait for 5 seconds before checking again
     if [ -s "$playlist" ]; then
