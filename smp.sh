@@ -4,7 +4,7 @@ playlist=$1
 if [ -z "$playlist" ]; then
     playlist=$SMP_PLAYLIST
 fi
-if [ -z "$playlist" ]
+if [ -z "$playlist" ]; then
     playlist="$HOME/smp_playlist"
 fi
 
@@ -28,7 +28,7 @@ while true; do
             exit 0
         fi
         # Play it
-        xargs "$player" "$music"
+        $player "$music"
     else
         sleep 5
     fi
