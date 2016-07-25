@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/usr/bin/env bash
 
 playlist=$1
 if [ -z "$playlist" ]; then
